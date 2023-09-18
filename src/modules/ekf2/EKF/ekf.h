@@ -261,7 +261,7 @@ public:
 	// get the ekf WGS-84 origin position and height and the system time it was last set
 	// return true if the origin is valid
 	bool getEkfGlobalOrigin(uint64_t &origin_time, double &latitude, double &longitude, float &origin_alt) const;
-	bool setEkfGlobalOrigin(const double latitude, const double longitude, const float altitude);
+	bool setEkfGlobalOrigin(double latitude, double longitude, float altitude, float eph = 0.f, float epv = 0.f);
 
 	// get the 1-sigma horizontal and vertical position uncertainty of the ekf WGS-84 position
 	void get_ekf_gpos_accuracy(float *ekf_eph, float *ekf_epv) const;
